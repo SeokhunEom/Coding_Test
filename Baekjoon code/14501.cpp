@@ -17,11 +17,6 @@ int main(void) {
     if (i + arr[i].first <= N + 1)
       dp[i + arr[i].first] = max(dp[i + arr[i].first], dp[i] + arr[i].second);
     dp[i + 1] = max(dp[i + 1], dp[i]);
-
-    for (int i = 1; i <= N + 1; i++) {
-      cout << dp[i] << ' ';
-    }
-    cout << '\n';
   }
   cout << dp[N + 1];
 
